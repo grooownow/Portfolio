@@ -1,7 +1,7 @@
 {
-  "name": "loftschool-builder",
+  "name": "Ludvik4",
   "version": "1.0.0",
-  "author": "a.kalin",
+  "author": "E/Pustovaya",
   "license": "ISC",
   "scripts": {},
   "devDependencies": {
@@ -17,6 +17,7 @@
     "gulp-imagemin": "^3.1.1",
     "gulp-load-plugins": "~1.5.0",
     "gulp-notify": "~3.0.0",
+    "gulp-plumber": "^1.1.0",
     "gulp-pug": "~3.2.0",
     "gulp-replace": "~0.5.4",
     "gulp-sass": "~3.1.0",

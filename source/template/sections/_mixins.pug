@@ -1,0 +1,21 @@
+mixin nav(className, items, activeItem)
+    nav(class=`${className}`)
+        .container
+            ul(class=`${className}__list`)
+                each item, ndx in items
+                    li(class=`${className}__item` + ( (ndx === activeItem ) ? ` ${className}__item_active` : '' ) )
+                        a(class=`${className}__link` href='#')= item
+
+mixin block-text( title, paragraphs)
+    .block-text
+        .block-text__title= title
+        .block-text__content
+            each paragraph, ndx in paragraphs
+                p.block-text__content___p= paragraph
+
+mixin block-figures( title, paragraphs)
+    .block-text
+        .block-text__title= title
+        .block-text__content
+            each paragraph, ndx in paragraphs
+                p.block-text__content___p= paragraph
