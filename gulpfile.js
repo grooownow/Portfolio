@@ -13,6 +13,7 @@ global.$ = {
   del: require('del'),
   buffer: require('vinyl-buffer'),
   merge: require('merge-stream'),
+  mainBowerFiles: require('main-bower-files'),
   browserSync: require('browser-sync').create(),
   gp: require('gulp-load-plugins')()
 };
@@ -27,6 +28,7 @@ $.gulp.task('default', $.gulp.series(
     'sass',
     'pug',
     'js:foundation',
+      'copyBowerFiles',
     'js:process',
     'copy:image',
     'copy:fonts',

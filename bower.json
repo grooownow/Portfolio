@@ -1,0 +1,21 @@
+{
+  "name": "corp_lands",
+  "description": "",
+  "main": "",
+  "authors": [
+    "E/Pustovaya"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/Ludvik4/maot_landinds",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "bootstrap": "^3.3.7"
+  }
+}
