@@ -7,35 +7,159 @@ block title
 	title #{title} || Корпоративная презентация
 
 block content
-	section.section-img
-		.block-logo
-			img.block-logo__img(src='/assets/img/logo.png')
-			.block-logo__desc раздел для корпоративных клиентов
+	section.section-img.section-img__logo
+		.section-img__logo___mask.section-img__mask
+			.block-logo
+				img.block-logo__img(src='/assets/img/logo.png')
+				.block-logo__desc раздел для корпоративных клиентов
 
-	section.section-img
-		+block-text('Солнечный Hotel & SPA', [
-		"Парк-отель «Солнечный» находится в 56 км от МКАД по Ленинградскому шоссе.  Охраняемая территория отеля находится рядом с Живагинским прудом и прилегает к лесопарковой зоне площадью 100 Га, переходящей в хвойный лес. ",
-		"Отель введен в эксплуатацию в 2010 году. На территории расположены корпуса, стилизованные под европейское шале, прекрасный SPA-центр, два бассейна.",
-		"Свежий воздух, умиротворяющая атмосфера, современная инфраструктура отлично подходят как для отдыха, так и для проведения корпоративных и деловых мероприятий.",
-		"Время в пути по платной дороге составит не более часа."])
+	section.section-img.section-img__about
+		.section-img__about___mask.section-img__mask
+			+block-text('Les Art Resort', [
+			"Один из самых популярных отелей Подмосковья. ",
+			"Комфортабельные номера,соответствующие европейским стандартам.",
+			"Развитая инфраструктура и удобное расположение (70 км.от МКАД) делают отель идеальным местом для проведения мероприятий.",
+			"Отель работает по системе All inclusive, а это значит, что отдых будет не только полноценным и разносторонним, но и выгодным и удобным."])
 
-	section.section-img
-		.block-figures
-			+figures-item('56', 'км от МКАД')
-			+figures-item('до 600', 'единовременное количество участников на конференции')
-			+figures-item('1670', 'общая площадь всех залов')
-			+figures-item('от 3400', 'руб./сутки за 1 человека')
+	section.section-img.section-img__figures
+		.section-img__mask.section-img__figures___mask
+			.block-figures
+				+figures-item('74', 'км от МКАД')
+				+figures-item('> 600', 'единовременное количество участников на конференции')
+				+figures-item('565', 'Мест для комфортного размещения')
+				+figures-item('от 6000', 'руб./сутки за номер')
 
-	section.section-img
-		.block-advant
-			+adv-item('tild3738-3634-4637-b232-363333303638__all.png',
-				'В систему «Все включено» входят: проживание, питание и развлечения, услуги SPA-комплекса, а также развлечения для детей.')
-			+adv-item('tild6437-3334-4833-b864-343233623863__wf.png',
-				'Wi-Fi на всей территории отеля.')
-			+adv-item('tild3662-3933-4339-a666-313866346537__parcing.png',
-				'Парковка для всех гостей отеля.')
-			+adv-item('tild3764-6466-4832-b235-373766346465__noroot.png',
-				'Номера оборудованы кондиционером. Отель расположен в экологически чистом районе Московской области.')
+	section.section-img.section-img__advant
+		.section-img__mask.section-img__advant___mask
+			.block-advant.clearfix
+				.block-advant__title Всё для вашего удобства
+				+adv-item('tild3738-3634-4637-b232-363333303638__all.png',
+					'В систему «Все включено» входят: проживание, питание и развлечения, услуги SPA-комплекса, а также развлечения для детей.')
+				+adv-item('tild6437-3334-4833-b864-343233623863__wf.png',
+					'Wi-Fi на всей территории отеля.')
+				+adv-item('tild3662-3933-4339-a666-313866346537__parcing.png',
+					'Парковка для всех гостей отеля.')
+				+adv-item('tild3764-6466-4832-b235-373766346465__noroot.png',
+					'Номера оборудованы кондиционером. Отель расположен в экологически чистом районе Московской области.')
 
-section.section-img
-		+block-text('Всё включено', ["В отеле #[Солнечный Park Hotel & SPA] действует система #[«Все включено»] с широким спектром услуг."])
+	section.section-img.section-img__allinc_food
+		.section-img__mask.section-img__allinc_food___mask
+			+block-text('Все включено',
+			["Завтрак (c 8:00 до 11:00), обед (13:00-16:00) и ужин (19:00-22:00) в ресторане шведской линии «Подиум». В меню шведского стола: свежие овощи, фрукты и зелень, широко представлены блюда из рыбы, мяса и птицы, холодные закуски и салаты, вкусные десерты, сладости и выпечка от шеф-кондитера, а также без ограничений алкогольные (красное, белое, игристое вина, пиво, водка (на обед и ужин) и безалкогольные напитки (соки, чай, кофе в ассортименте). ",
+				"<strong>Open бар</strong> (с 11:00 до 23:00) (без ограничений алкогольные (красное, белое, игристое вина, пиво) и безалкогольные напитки (соки, чай в ассортименте, кофе), мороженое в ассортименте.",
+				"Дискотека и караоке в ночном клубе <br>	Прокат спортивного инвентаря(велосипеды, велобеги, бадминтон, роликовые коньки, мячи и многое другое – в летнее время; коньки, лыжи, снегокаты, тюбинги – в зимнее время) <br> Бильярд (6 столов), боулинг (4 дорожки) <br> Wi-fi на всей территории отеля, парковка, поле для мини-гольфа (в летний период), в лобби баре и баре «5 O'Сlock»",
+			"Вечерняя шоу-программа от команды анимации по пятницам и субботам, анимация (спортивно-развлекательные мероприятия на свежем воздухе и в бассейне).Вечерняя шоу-программа от команды анимации по пятницам и субботам, анимация (спортивно-развлекательные мероприятия на свежем воздухе и в бассейне)."])
+
+	section.section-img.section-img__allincl_spa
+		.section-img__mask.section-img__allincl_spa___mask
+			.block-text
+				.block-text__title Все включено
+				.block-text__content
+					p.block-text__content___p Услуги SPA комплекса, время работы с 9:00 до 21:00
+					ul.block-text__list
+						li.block-text__list__item Бассейн с аквагоркой (50м*20м)
+						li.block-text__list__item Джакузи
+						li.block-text__list__item Дорожка Кнейпа
+						li.block-text__list__item Ледяной фонтан
+						li.block-text__list__item Гидромассажные ванны для ног
+						li.block-text__list__item Душ впечатлений (3 душевые кабины с разнообразными режимами)
+						li.block-text__list__item Душ «Горный водопад»
+						li.block-text__list__item Сауны (травяная, финская)
+						li.block-text__list__item Паровые бани
+						li.block-text__list__item Солевой грот
+						li.block-text__list__item Зона искусственного солнца
+						li.block-text__list__item Тренажерный зал
+						li.block-text__list__item Зал для занятий йогой и танцами
+						li.block-text__list__item.strong А также новинка отеля 2016 года – открытый всесезонный уличный бассейн
+	//Форма - получить специальные тарифы
+	include  ../sections/form-spectarif.pug
+
+	section.section-grey.
+		+block-text('Конференц-зона',
+		['Возможности Les Art Resort позволяют провести корпоративное мероприятие любого формата на высшем уровне.',
+			'Просторная и функциональная конференц-зона на 3 этаже располагает всем необходимым для проведения симпозиумов, конференций, презентаций, бизнес - тренингов и других официальных или неофициальных встреч.',
+			'Вместе с арендой зала, включающей в себя все необходимое оборудование, Вам будет предоставлена профессиональная помощь консультантов, администраторов и обслуживающего персонала.'])
+		+block-columns(['tild3864-3562-4639-b764-373136663964__corp94b3.jpg',
+		'tild3466-6336-4434-b461-666237646635__lesfoto21.jpg',
+		'/tild3339-6465-4338-a162-306239636436__lesfoto31.jpg'])
+
+	section.section-img.section-img__halls.clearfix
+		.section-img__mask.section-img__halls___mask
+			.block-halls
+				.block-text
+					.block-text__title Зал-амфитеатр «Олимп»
+					.block-text__content
+						p.block-text__content___p Один из самых больших конференц-залов в Подмосковье, площадью 466 кв. м. и находится на 3 этаже рядом с залами поменьше, что весьма удобно, если необходимо разделить аудиторию в ходе проведения мероприятия. Вместимость до 515 человек.
+						p.block-text__content___p.no-margin В стоимость аренды входят:
+						ul.block-text__list
+							li.block-text__list__item Wi-Fi;
+							li.block-text__list__item экран;
+							li.block-text__list__item флипчарт с блокнотом и маркерами;
+							li.block-text__list__item LCD проектор; микрофон (2 шт.); лазерная указка;
+							li.block-text__list__item микшерный пульт и работа звукорежиссера;
+							li.block-text__list__item канцелярия для спикера;
+							li.block-text__list__item минеральная вода малого объёма.
+				.block-halls__plan___wrapper
+					.block-halls__plan___title План рассадки
+					+block-halls__plan(['tild3465-6133-4130-b437-356134353235__4.png'])
+
+	section.section-img.section-img__halls-big.clearfix
+		.section-img__mask.section-img__halls-big___mask
+			.block-halls
+				.block-text
+					.block-text__title Большие залы
+					.block-text__content
+						p.block-text__content___p Абсолютно идентичны по планировке и возможностям залы №1 и №2, каждый вместимостью до 105 человек, площадью 133 кв.м. каждый.
+						p.block-text__content___p.no-margin В стоимость аренды входят:
+						ul.block-text__list
+							li.block-text__list__item Wi-Fi, экран;
+							li.block-text__list__item флипчарт с блокнотом и маркерами, LCD проектор;
+							li.block-text__list__item лазерная указка или беспроводной презентатор;
+							li.block-text__list__item канцелярия для спикера;
+							li.block-text__list__item минеральная вода малого объёма.
+				.block-halls__plan___wrapper
+					.block-halls__plan___title Планы рассадки
+					+block-halls__plan(['tild6335-6530-4361-b737-643166363438__48.png',
+					'tild3436-6135-4938-a563-366465396661__105.png',
+					'tild3436-6135-4938-a563-366465396661__105.png'])
+
+	section.section-img.section-img__halls-small.clearfix
+		.section-img__mask.section-img__halls-small___mask
+			.block-halls
+				.block-text
+					.block-text__title Малые залы
+					.block-text__content
+						p.block-text__content___p Два одинаковых зала, максимальной вместимостью до 52 человек и площадью 66 кв. м. каждый. Оба зала сообщаются с соседними большими залами через общие двери.
+						p.block-text__content___p.no-margin В стоимость аренды входят:
+						ul.block-text__list
+							li.block-text__list__item Wi-Fi, LCD панель;
+							li.block-text__list__item флипчарт с блокнотом и маркерами;
+							li.block-text__list__item лазерная указка или беспроводной презентатор;
+							li.block-text__list__item канцелярия для спикера;
+							li.block-text__list__item минеральная вода малого объёма.
+				.block-halls__plan___wrapper
+					.block-halls__plan___title Планы рассадки
+					+block-halls__plan(['tild6634-3431-4461-a136-616565653161__22.png',
+						'tild6231-3864-4534-a536-613530636264__18.png',
+						'tild6231-3864-4534-a536-613530636264__18.png'])
+
+	section.section-img.section-img__halls-winter.clearfix
+		.section-img__mask.section-img__halls-winter___mask
+			.block-halls
+				.block-text
+					.block-text__title Зимний сад
+					.block-text__content
+						p.block-text__content___p Универсальный зал, который может быть использован под любое мероприятие.
+						p.block-text__content___p.no-margin Вместимость до 260 человек, площадь 573 кв.м.
+				.block-halls__plan___wrapper
+					.block-halls__plan___title Планы рассадки
+					+block-halls__plan(['140.png',
+						'tild3935-3635-4066-b230-343339376431__45.png',
+						'tild3436-6538-4636-b432-393161373262__260.png'])
+
+		section.section-img.section-img__service
+			+block-text('Дополнительные услуги', [
+				"За дополнительную плату доступны: ",
+				"оборудование для синхронного перевода;",
+				"профессиональное концертное оборудование для света и звука;",
+				"ноутбуки; принтеры; сканеры."])

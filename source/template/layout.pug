@@ -8,8 +8,10 @@ html(lang='ru')
 		meta(charset='UTF-8')
 		meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
 		meta(name='viewport', content='width=device-width')
-		link(href='/assets/css/main.css', rel='stylesheet')
 		link(href='/assets/libs/bootstrap.min.css', rel='stylesheet')
+		link(href='/assets/css/main.css', rel='stylesheet')
+		link(href="http://allfont.ru/allfont.css?fonts=open-sans", rel="stylesheet",  type="text/css")
+		link(href="http://allfont.ru/allfont.css?fonts=open-sans-light", rel="stylesheet",  type="text/css")
 
 	block title
 		title Главная Страница
@@ -17,7 +19,7 @@ html(lang='ru')
 		.wrapper
 		.maincontent
 
-			+nav('nav', ["главная", "новости", "о компании", "сравнение"], 0)
+			+nav('nav', ["Рассчитать за 30 минут", "На главная", "Всё включено", "Номера", "Залы", "Рестораны", "SPA", "Развлечения", "Контакты"], 0)
 
 			block content
 

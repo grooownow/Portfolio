@@ -1,19 +1,18 @@
 mixin nav(className, items, activeItem)
 	nav(class=`${className}`)
-		.container
-			ul(class=`${className}__list`)
-				each item, ndx in items
-					li(class=`${className}__item` + ( (ndx === activeItem ) ? ` ${className}__item_active` : '' ) )
-						a(class=`${className}__link` href='#')= item
+		ul(class=`${className}__list`)
+			each item, ndx in items
+				li(class=`${className}__item` + ( (ndx === activeItem ) ? ` ${className}__item_active` : '' ) )
+					a(class=`${className}__link` href='#')= item
 
-mixin block-text( title, paragraphs)
+mixin block-text(title, paragraphs)
 	.block-text
 		.block-text__title= title
 			.block-text__content
 				each paragraph, ndx in paragraphs
-					p.block-text__content___p= paragraph
+					p.block-text__content___p!= paragraph
 
-mixin figures-item( title, paragraph)
+mixin figures-item(title, paragraph)
 	.block-figures__item
 		.block-figures__item__title= title
 		.block-figures__item__paragraph= paragraph
@@ -24,4 +23,14 @@ mixin adv-item( iconName, paragraph)
 			img.block-adv__item__img(src=`/assets/img/${iconName}`)
 		.block-adv__item__paragraph= paragraph
 
+mixin block-columns(imgNames)
+	.block-columns
+		.block-columns__item
+			each imgName, ndx in imgNames
+				img.block-columns__img.pop-up__img(src=`/assets/img/${imgName}`)
 
+mixin block-halls__plan(imgNames)
+	.block-halls__plan
+		each imgName, ndx in imgNames
+			a.block-halls__plan___link(href=`/assets/img/${imgName}`)
+				img.block-halls__plan___img(src=`/assets/img/${imgName}`)

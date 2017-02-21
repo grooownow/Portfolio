@@ -1,0 +1,86 @@
+
+.nav
+	position: fixed
+	z-index: 20
+	top: 40px
+	left: 40px
+	right: 40px
+	.nav__list
+		text-align: right
+		.nav__item
+			display: inline-block
+			.nav__link
+				font-family: 'Open Sans ', arial
+				color: #c7c7c7
+				font-size: 16px
+				padding: 0 15px
+				transition: 0.5s
+				&:hover
+					text-decoration: none
+					color: #919191
+		.nav__item_active
+			.nav__link
+				color: #919191
+				opacity: 0.7
+				font-weight: bold
+
+.section-img, .section-grey
+  height: 100vh
+.section-grey
+  padding-top: 75px
+  padding-bottom: 45px
+  background-color: #f0f0f0
+.section-img
+  background-size: cover
+  background-repeat: no-repeat
+  position: relative
+  color: #FFFFFF
+  font-size: 20px
+  font-weight: 300
+  line-height: 1.55
+.section-img__mask
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom:  0
+  z-index:  1
+
+// background for sections
+.section-img__logo
+	background-image: url('../img/tild3761-3030-4035-b432-303766316531__les_art_rezort_31.jpg')
+	text-align: center
+	.section-img__mask
+		background: -webkit-gradient( linear, left top, left bottom, from(rgba(0,0,0,0.5)), to(rgba(0,0,0,0.5)) )
+.block-logo
+	padding-top: 320px
+	text-align: center
+	
+	.block-logo__img
+		width:  80%
+		max-width: 520px
+		height: auto
+		margin-bottom: 200px
+	.block-logo__desc
+		background: rgba(255, 255, 255, 0.38)
+		color: #FFFFFF
+		font-size: 32px
+		line-height: 1.55
+		text-transform: uppercase
+		font-family: 'Open Sans ', arial
+
+.section-img__about
+  background-image: url('../img/tild6338-6139-4436-a166-356136663730__4.jpg')
+.section-img__about___mask
+  background-image: -webkit-linear-gradient(top, rgba(2,42,89,0.80), rgba(0,0,0,0.30))
+.section-img__figures
+  background-color: #646464
+  background-image: url('../img/222cf012272les.jpg')
+.section-img__figures___mask
+  background: -webkit-gradient( linear, left top, left bottom, from(rgba(0,0,0,0.7)), to(rgba(0,0,0,0.5)) )
+.section-img__advant
+    background-image: url('../img/tild3939-6136-4464-b463-363134643361__lesfoto41.jpg')
+.section-img__advant___mask
+    background-color: #000000
+    opacity: 0.7
+
