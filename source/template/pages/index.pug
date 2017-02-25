@@ -7,7 +7,7 @@ block title
 	title #{title} || Корпоративная презентация
 
 block content
-	section.section-img.section-img__logo
+	section.section-img.section-img__logo#main
 		.section-img__logo___mask.section-img__mask
 		.block-logo.section__block
 			img.block-logo__img(src='/assets/img/logo.png')
@@ -43,7 +43,7 @@ block content
 			+adv-item('tild3764-6466-4832-b235-373766346465__noroot.png',
 				'Номера оборудованы кондиционером. Отель расположен в экологически чистом районе Московской области.')
 
-	section.section-img.section-img__allinc.section-img__allinc_food
+	section.section-img.section-img__allinc.section-img__allinc_food#allinclusive
 		.section-img__mask.section-img__allinc_food___mask
 		+block-text('Все включено',
 		["Завтрак (c 8:00 до 11:00), обед (13:00-16:00) и ужин (19:00-22:00) в ресторане шведской линии «Подиум». В меню шведского стола: свежие овощи, фрукты и зелень, широко представлены блюда из рыбы, мяса и птицы, холодные закуски и салаты, вкусные десерты, сладости и выпечка от шеф-кондитера, а также без ограничений алкогольные (красное, белое, игристое вина, пиво, водка (на обед и ужин) и безалкогольные напитки (соки, чай, кофе в ассортименте). ",
@@ -76,7 +76,7 @@ block content
 	//Форма - получить специальные тарифы
 	include  ../sections/form-spectarif.pug
 
-	section.section-grey
+	section.section-grey#halls
 		.section-grey_block
 			+block-text('Конференц-зона',
 			['Возможности Les Art Resort позволяют провести корпоративное мероприятие любого формата на высшем уровне.',
@@ -173,7 +173,7 @@ block content
 	//Форма - получить специальные тарифы
 	include  ../sections/form-spectarif.pug
 
-	section.section-grey
+	section.section-grey#restourans
 		.section-grey_block
 			+block-text('Ресторанная зона',
 			['Питание гостей проходит в ресторане шведской линии «Подиум». <br> Ресторан «Галерея» и арт-кафе «Дали» находятся на втором этаже и работают по системе a la carte. <br>	Провести корпоративные банкеты, фуршеты, гала-ужины можно в отдельных <br> банкетных залах отеля. <br> 	Для этих целей предоставляются залы «Банкетный», «Зимний сад», «Бельведер», «Галерея», «Дали». <br>Возможно также организовать барбекю на открытой площадке.'])
@@ -221,3 +221,82 @@ block content
 				.block-halls__plan___title Планы рассадки
 				+block-halls__plan(['tild6165-3362-4233-b832-343639356266__35.png',
 					'tild3932-3266-4264-b035-666330383834__60.png'])
+
+	section.section-img.section-img__halls-coffee
+		.section-img__mask.section-img__halls-coffee___mask
+		.block-halls.section__block.clearfix
+			.block-text
+				.block-text__title Кофе-брейки
+				.block-text__content
+					p.block-text__content___p В меню могут быть лёгкие закуски, канапе и тарталетки, пирожные и сладости, ароматный чай, кофе и даже шампанское! <br> <br> Кофе-паузу сервируют в фойе, или, по желанию заказчика, она может быть организована в зале, где проводится мероприятие.
+			.block-halls__plan___wrapper
+				.block-halls__plan___title_coffee <span class="font50">от</span> 260₽
+				.block-halls__plan___desc Для 1 участника
+
+	section.section-img.section-img__barbecui
+		.section-img__barbecui___mask.section-img__mask
+		.section__block__container
+			+block-text('Зона барбекю', ['5 маленьких беседок до 8 человек,',
+			"1 большая беседка до 20 человек,",
+			"Зона барбекю до 100 человек"])
+	section.section-barbecui_photos.block-columns.clearfix.popup-container_img
+		+block-columns__item("tild6432-6262-4534-a532-313730356162__1122.jpg")
+		+block-columns__item("/tild3832-3438-4135-b566-646231663561__pit94b3.jpg")
+		+block-columns__item("tild6131-3530-4139-b835-303234336432__cda52ce311a84accb09462a798fe3b00.jpg")
+
+	//Форма - получить специальные тарифы
+	include  ../sections/form-spectarif.pug
+
+	section.section-grey#entertainment
+		.section-grey_block
+			+block-text('Развлечения и спорт',
+      ['Для любителей активного отдыха есть все возможные развлечения на свежем воздухе:',
+          'прокат горных и прогулочных велосипедов с детским сиденьем, беговелы, самокаты, бадминтон, крокет, мини-гольф, баскетбол, волейбол, роликовые коньки и многое другое.',
+          'В отеле работает пункт проката, где Вы можете взять необходимое оборудование и спортивный инвентарь.Услуги пункта проката входят в стоимость проживания.<br><br><br>'])
+			.block-columns.clearfix.popup-container_img
+				+block-columns__item('tild6537-3030-4262-b839-636132313734__pool.jpg')
+				+block-columns__item('tild3334-3865-4838-b731-326465386362__deti_2.jpg')
+				+block-columns__item('yoga1.jpg')
+
+	section.section-img.section-img__football
+		.section-img__football___mask.section-img__mask
+		.section__block__container
+			+block-text('Площадка для игры в волейбол и баскетбол, футбольное поле, мини - гольф',
+			['Универсальная площадка для игры в волейбол и баскетбол расположена рядом с футбольным полем.',
+			"Представляет собой прямоугольное игровое пространство размером 15*30 метров с комбинированной разметкой для игры в волейбол и баскетбол. Площадка оборудована волейбольной сеткой, щитами с баскетбольными кольцами, освещением в темное время суток, а также профессиональным напольным покрытием из резиновой крошки толщиной 10мм.",
+			"Футбольное поле расположено в лесной зоне отеля LES Art Resort. Игровое пространство представляет собой прямоугольную площадку размером 20*40 метров с соответствующей разметкой, воротами и защитным ограждением, покрытое искусственным всесезонным газоном с засыпкой кварцевым песком.",
+			"Площадка для мини-гольфа, расположенная на территории нашего отеля - это отличное место для всех любителей активного отдыха в Подмосковье. К тому же это отличное средство для расслабления и возможность отвлечься от повседневности.<br>          Поле доступно всем желающим, игра в мини - гольф пополнила перечень услуг нашего отеля, входящих в систему «Все включено». Клюшки и мячи вы можете бесплатно взять в пункте проката."])
+
+	section.section-img.section-img__spa#spa
+		.section-img__spa___mask.section-img__mask
+		.section__block__container
+			+block-text('SPA зона',
+      ['В SPA-отеле LES Art Resort созданы все условия для тех, кто хочет провести время с пользой для души и тела.'])
+			p.block-text__content___p.no-margin К услугам гостей:
+			ul.block-text__list
+				li.block-text__list__item 50-метровый бассейн Олимпийского формата;
+				li.block-text__list__item термальные зоны, фитобар;
+				li.block-text__list__item различные методики массажа;
+				li.block-text__list__item популярные SPA-программы;
+				li.block-text__list__item имиджевая beauty-зона;
+				li.block-text__list__item зона отдыха «Искусственное солнце»;
+				li.block-text__list__item современный фитнес-центр;
+				li.block-text__list__item зал для занятий йогой.
+
+	section.section-img.section-img__open-pool
+		.section-img__open-pool___mask.section-img__mask
+		.section__block__container
+			+block-text('Открытый бассейн',
+      ['Комплекс LAGUNA представляет собой отдельно стоящее сооружение с панорамным остеклением и общей площадью 1000 квадратных метров.',
+			"Комплекс гармонично вписан в естественный природный ландшафт отеля LES Art resort и теперь составляет единый архитектурный ансамбль с открытым водоемом. <br> <br>",
+			"Время работы с 9.00-21.00.<br> Размер – 30x20 м.",])
+
+	section.section-grey#rooms
+		.section-grey_block
+			+block-text('Номерной фонд',
+      ['Отель LES Art Resort – это 250 однокомнатных номеров пяти категорий: Standard, Simple suite, Panorama suite, Classic suite и Classic suite+, а также 10 коттеджей (категория Villa). Какую бы категорию Вы ни выбрали, к Вашим услугам кондиционер, сейф, плазменный телевизор со спутниковыми каналами и бесплатный Wi-Fi.',
+          'Корпуса и коттеджи построены из дерева хвойных пород, хранящего тонкий аромат соснового леса. В оформлении сделан акцент на современный дизайн и экологичные материалы. Большие окна наполняют пространство комнат светом и воздухом.'])
+			.block-columns.clearfix.popup-container_img
+				+block-columns__item('tild3665-6462-4630-b236-656333626636__lesfoto41.jpg')
+				+block-columns__item('tild3738-3064-4163-b466-343763393863__lesfoto43.jpg')
+				+block-columns__item('tild3363-3736-4362-b234-616239383866__villa4.jpg')
