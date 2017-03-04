@@ -1,6 +1,7 @@
 include ./sections/_mixins
 
 block variables
+	-var name = 'Екатерина Пустовая'
 
 doctype html
 html(lang='ru')
@@ -8,21 +9,11 @@ html(lang='ru')
 		meta(charset='UTF-8')
 		meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
 		meta(name='viewport', content='width=device-width')
-		link(href='/assets/libs/bootstrap.min.css', rel='stylesheet')
-		link(href='/assets/libs/magnific-popup.css', rel='stylesheet')
 		link(href='/assets/css/main.css', rel='stylesheet')
-		link(href="http://allfont.ru/allfont.css?fonts=open-sans", rel="stylesheet",  type="text/css")
-		link(href="http://allfont.ru/allfont.css?fonts=open-sans-light", rel="stylesheet",  type="text/css")
+		link(href='/assets/fonts/fonts.css', rel='stylesheet')
 
 	block title
-		title Главная Страница
-	body
-		.wrapper
-		.maincontent
+		title #{name}
+	block content
 
-			+nav('nav', ["Рассчитать за 30 минут", "На главную", "Всё включено", "Номера", "Залы", "Рестораны", "SPA", "Развлечения", "Контакты"], ["/#form30", "/#main", "/#allinclusive", "/#rooms", "/#halls", "/#restourans", "/#spa", "/#entertainment", "/#contacts"], 1)
-
-			block content
-
-		include ./sections/footer
 

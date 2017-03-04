@@ -1,302 +1,42 @@
 extends ../layout
 
-block variables
-	-var title ='Отель Лес-Арт'
-
 block title
-	title #{title} || Корпоративная презентация
 
 block content
-	section.section-img.section-img__logo#main
-		.section-img__logo___mask.section-img__mask
-		.block-logo.section__block
-			img.block-logo__img(src='/assets/img/logo.png')
-			.block-logo__desc раздел для корпоративных клиентов
+	.maincontent.maincontent_welcome
+		.l-section.l-welcome
+			a.c-auth__link(href='#') Авторизироваться
+			.flip-container
+				.flipper
+					.front
+						.l-hero__container.l-hero__container_welcome
+							.c-user
+								img.c-user__pic(src='/assets/images/user.jpg', alt=`${name}`)
+								.c-user__name #{name}
+								.c-user__occ личный сайт веб-разработчика
+							+socials('welcome', ['vk', 'github', 'in'], ['https://vk.com/kate_kro', 'https://github.com/Ludvik4', '#'])
+							+nav('l-nav_welcome', ['Мои работы', 'Обо мне', 'Блог'], ['/works.html', '/about.html', '/blog.html'])
+					.back
+						.l-hero__container.l-hero__container_welcome
+							.c-auth
+								.c-auth__title Авторизируйтесь
+								form.c-auth__form#auth(method='post')
+									input.c-auth__inp(name='login', type='text', require='', placeholder='Логин')
+									input.c-auth__inp(name='password', type='password', require='', placeholder='Пароль')
+									.c-auth__wrapper-inp
+										input.c-auth__checkbox(type='checkbox')
+										span.c-auth__checkbox_desc Я человек
+									.c-auth_question Вы точно человек?
+									.c-auth__wrapper-inp
+										input.c-auth__radio(type='radio', name='answer', value='human')
+										span.c-auth__checkbox_desc Да
+										input.c-auth__radio(type='radio', name='answer', value='other')
+										span.c-auth__checkbox_desc Не уверен
+									.l-nav_auth
+										ul.l-nav_auth__list
+											li.l-nav_auth__item
+												a.l-nav_auth__link(href='#') На главную
+											li.l-nav_auth__item
+												a.l-nav_auth__link(href='#', type='submit') Войти
 
-	section.section-img.section-img__about
-		.section-img__about___mask.section-img__mask
-		.section__block__container
-			+block-text('Les Art Resort', [
-			"Один из самых популярных отелей Подмосковья. ",
-			"Комфортабельные номера, <br> соответствующие европейским стандартам.",
-			"Развитая инфраструктура и удобное расположение <br> (70 км.от МКАД) делают отель идеальным местом для проведения мероприятий.",
-			"Отель работает по системе All inclusive, а это значит, что отдых будет не только полноценным и разносторонним, но и выгодным и удобным."])
-
-	section.section-img.section-img__figures
-		.section-img__mask.section-img__figures___mask
-		.block-figures.section__block.clearfix
-			+figures-item('74', 'км от МКАД')
-			+figures-item('> 600', 'единовременное количество участников на конференции')
-			+figures-item('565', 'Мест для комфортного размещения')
-			+figures-item('от 6000', 'руб./сутки за номер')
-
-	section.section-img.section-img__advant
-		.section-img__mask.section-img__advant___mask
-		.block-advant.clearfix.section__block
-			.block-advant__title.title Всё для вашего удобства
-			+adv-item('tild3738-3634-4637-b232-363333303638__all.png',
-				'В систему «Все включено» входят: проживание, питание и развлечения, услуги SPA-комплекса, а также развлечения для детей.')
-			+adv-item('tild6437-3334-4833-b864-343233623863__wf.png',
-				'Wi-Fi на всей территории отеля.')
-			+adv-item('tild3662-3933-4339-a666-313866346537__parcing.png',
-				'Парковка для всех гостей отеля.')
-			+adv-item('tild3764-6466-4832-b235-373766346465__noroot.png',
-				'Номера оборудованы кондиционером. Отель расположен в экологически чистом районе Московской области.')
-
-	section.section-img.section-img__allinc.section-img__allinc_food#allinclusive
-		.section-img__mask.section-img__allinc_food___mask
-		+block-text('Все включено',
-		["Завтрак (c 8:00 до 11:00), обед (13:00-16:00) и ужин (19:00-22:00) в ресторане шведской линии «Подиум». В меню шведского стола: свежие овощи, фрукты и зелень, широко представлены блюда из рыбы, мяса и птицы, холодные закуски и салаты, вкусные десерты, сладости и выпечка от шеф-кондитера, а также без ограничений алкогольные (красное, белое, игристое вина, пиво, водка (на обед и ужин) и безалкогольные напитки (соки, чай, кофе в ассортименте). ",
-			"<strong>Open бар</strong> (с 11:00 до 23:00) (без ограничений алкогольные (красное, белое, игристое вина, пиво) и безалкогольные напитки (соки, чай в ассортименте, кофе), мороженое в ассортименте.",
-			"Дискотека и караоке в ночном клубе <br>	Прокат спортивного инвентаря(велосипеды, велобеги, бадминтон, роликовые коньки, мячи и многое другое – в летнее время; коньки, лыжи, снегокаты, тюбинги – в зимнее время) <br> Бильярд (6 столов), боулинг (4 дорожки) <br> Wi-fi на всей территории отеля, парковка, поле для мини-гольфа (в летний период), в лобби баре и баре «5 O'Сlock»",
-		"Вечерняя шоу-программа от команды анимации по пятницам и субботам, анимация (спортивно-развлекательные мероприятия на свежем воздухе и в бассейне)."])
-
-	section.section-img.section-img__allinc.section-img__allinc_spa
-		.section-img__mask.section-img__allinc_spa___mask
-		.block-text.section__block
-			.block-text__title Все включено
-			.block-text__content
-				p.block-text__content___p Услуги SPA комплекса, время работы с 9:00 до 21:00
-				ul.block-text__list
-					li.block-text__list__item Бассейн с аквагоркой (50м*20м)
-					li.block-text__list__item Джакузи
-					li.block-text__list__item Дорожка Кнейпа
-					li.block-text__list__item Ледяной фонтан
-					li.block-text__list__item Гидромассажные ванны для ног
-					li.block-text__list__item Душ впечатлений (3 душевые кабины  <br> с разнообразными режимами)
-					li.block-text__list__item Душ «Горный водопад»
-					li.block-text__list__item Сауны (травяная, финская)
-					li.block-text__list__item Паровые бани
-					li.block-text__list__item Солевой грот
-					li.block-text__list__item Зона искусственного солнца
-					li.block-text__list__item Тренажерный зал
-					li.block-text__list__item Зал для занятий йогой и танцами
-					li.block-text__list__item.strong А также новинка отеля 2016 года – открытый всесезонный уличный бассейн
-
-	//Форма - получить специальные тарифы
-	include  ../sections/form-spectarif.pug
-
-	section.section-grey#halls
-		.section-grey_block
-			+block-text('Конференц-зона',
-			['Возможности Les Art Resort позволяют провести корпоративное мероприятие любого формата на высшем уровне.',
-				'Просторная и функциональная конференц-зона на 3 этаже располагает всем необходимым для проведения симпозиумов, конференций, презентаций, бизнес - тренингов и других официальных или неофициальных встреч.',
-				'Вместе с арендой зала, включающей в себя все необходимое оборудование, Вам будет предоставлена профессиональная помощь консультантов, администраторов и обслуживающего персонала.'])
-			.block-columns.clearfix.popup-container_img
-				+block-columns__item('tild3864-3562-4639-b764-373136663964__corp94b3.jpg')
-				+block-columns__item('tild3466-6336-4434-b461-666237646635__lesfoto21.jpg')
-				+block-columns__item('tild3339-6465-4338-a162-306239636436__lesfoto31.jpg')
-
-	section.section-img.section-img__halls-olimp
-		.section-img__mask.section-img__halls-olimp___mask
-		.block-halls.section__block.clearfix
-			.block-text
-				.block-text__title Зал-амфитеатр «Олимп»
-				.block-text__content
-					p.block-text__content___p Один из самых больших конференц-залов в Подмосковье, площадью 466 кв. м. <br> и находится на 3 этаже рядом с залами поменьше, что весьма удобно, если необходимо разделить аудиторию в ходе проведения мероприятия. Вместимость до 515 человек.
-					p.block-text__content___p.no-margin В стоимость аренды входят:
-					ul.block-text__list
-						li.block-text__list__item Wi-Fi;
-						li.block-text__list__item экран;
-						li.block-text__list__item флипчарт с блокнотом и маркерами;
-						li.block-text__list__item LCD проектор; микрофон (2 шт.); лазерная указка;
-						li.block-text__list__item микшерный пульт и работа звукорежиссера;
-						li.block-text__list__item канцелярия для спикера;
-						li.block-text__list__item минеральная вода малого объёма.
-			.block-halls__plan___wrapper
-				.block-halls__plan___title План рассадки
-				+block-halls__plan(['tild3465-6133-4130-b437-356134353235__4.png'])
-
-	section.section-img.section-img__halls-big
-		.section-img__mask.section-img__halls-big___mask
-		.block-halls.section__block.clearfix
-			.block-text
-				.block-text__title Большие залы
-				.block-text__content
-					p.block-text__content___p Абсолютно идентичны по планировке и возможностям залы №1 и №2, каждый вместимостью до 105 человек, площадью 133 кв.м. каждый.
-					p.block-text__content___p.no-margin В стоимость аренды входят:
-					ul.block-text__list
-						li.block-text__list__item Wi-Fi, экран;
-						li.block-text__list__item флипчарт с блокнотом и маркерами, LCD проектор;
-						li.block-text__list__item лазерная указка или беспроводной презентатор;
-						li.block-text__list__item канцелярия для спикера;
-						li.block-text__list__item минеральная вода малого объёма.
-			.block-halls__plan___wrapper
-				.block-halls__plan___title Планы рассадки
-				+block-halls__plan(['tild6335-6530-4361-b737-643166363438__48.png',
-				'tild3436-6135-4938-a563-366465396661__105.png',
-				'tild3436-6135-4938-a563-366465396661__105.png'])
-
-	section.section-img.section-img__halls-small
-		.section-img__mask.section-img__halls-small___mask
-		.block-halls.section__block.clearfix
-			.block-text
-				.block-text__title Малые залы
-				.block-text__content
-					p.block-text__content___p Два одинаковых зала, максимальной вместимостью до 52 человек и площадью 66 кв. м. каждый. Оба зала сообщаются с соседними большими залами через общие двери.
-					p.block-text__content___p.no-margin В стоимость аренды входят:
-					ul.block-text__list
-						li.block-text__list__item Wi-Fi, LCD панель;
-						li.block-text__list__item флипчарт с блокнотом и маркерами;
-						li.block-text__list__item лазерная указка или беспроводной презентатор;
-						li.block-text__list__item канцелярия для спикера;
-						li.block-text__list__item минеральная вода малого объёма.
-			.block-halls__plan___wrapper
-				.block-halls__plan___title Планы рассадки
-				+block-halls__plan(['tild6634-3431-4461-a136-616565653161__22.png',
-					'tild6231-3864-4534-a536-613530636264__18.png',
-					'tild6231-3864-4534-a536-613530636264__18.png'])
-
-	section.section-img.section-img__halls-winter
-		.section-img__mask.section-img__halls-winter___mask
-		.block-halls.section__block.clearfix.section__block__container
-			.block-text
-				.block-text__title Зимний сад
-				.block-text__content
-					p.block-text__content___p Универсальный зал, который может быть использован под любое мероприятие.
-					p.block-text__content___p.no-margin Вместимость до 260 человек, площадь 573 кв.м.
-			.block-halls__plan___wrapper
-				.block-halls__plan___title Планы рассадки
-				+block-halls__plan(['140.png',
-					'tild3935-3635-4066-b230-343339376431__45.png',
-					'tild3436-6538-4636-b432-393161373262__260.png'])
-
-	section.section-img.section-img__service
-		.section-img__mask.section-img__service___mask
-		.section__block__container
-			+block-text('Дополнительные услуги', [
-				"За дополнительную плату доступны: ",
-				"оборудование для синхронного перевода;",
-				"профессиональное концертное оборудование для света и звука;",
-				"ноутбуки; принтеры; сканеры."])
-
-	//Форма - получить специальные тарифы
-	include  ../sections/form-spectarif.pug
-
-	section.section-grey#restourans
-		.section-grey_block
-			+block-text('Ресторанная зона',
-			['Питание гостей проходит в ресторане шведской линии «Подиум». <br> Ресторан «Галерея» и арт-кафе «Дали» находятся на втором этаже и работают по системе a la carte. <br>	Провести корпоративные банкеты, фуршеты, гала-ужины можно в отдельных <br> банкетных залах отеля. <br> 	Для этих целей предоставляются залы «Банкетный», «Зимний сад», «Бельведер», «Галерея», «Дали». <br>Возможно также организовать барбекю на открытой площадке.'])
-			.block-columns.clearfix.popup-container_img
-				+block-columns__item('tild6566-3464-4630-a133-356233383233__podium1.jpg')
-				+block-columns__item('tild3662-3634-4338-a632-306365636537__les_art_rezort_5.jpg')
-				+block-columns__item('tild3738-3362-4762-a232-646336666635__lesartrezortdali1.jpg')
-
-	section.section-img.section-img__halls-banquet
-		.section-img__mask.section-img__halls-banquet___mask
-		.block-halls.section__block.clearfix
-			.block-text
-				.block-text__title Банкетный зал
-				.block-text__content
-					p.block-text__content___p Один из самых грандиозных в Подмосковье, банкетный зал отеля LES Art Resort является частью конференц-зоны на третьем этаже, его вместимость до 260 человек, площадь 690 кв.м.
-			.block-halls__plan___wrapper
-				.block-halls__plan___title Планы рассадки
-				+block-halls__plan(['tild3465-3839-4432-b762-333061653262__230.png',
-					'60.png',
-					'tild6634-3332-4438-b761-306630303638__260.png'])
-
-	section.section-img.section-img__belveder
-		.section-img__belveder___mask.section-img__mask
-		.section__block__container
-			+block-text('Банкетный павильон «Бельведер»', [
-				"К услугам гостей в отеле предусмотрен банкетный павильон «Бельведер» <br> 	с оригинальным дизайном и панорамным остеклением.",
-				"Персонал отеля с удовольствием поможет гостям отметить торжественное событие, день рождения, юбилей или свадьбу.",
-				"Площадь павильона составляет 600 кв. м.<br> Вмещает в себя 300 - 320 человек при банкетной рассадке."])
-
-	section.section-img.section-img__podium
-		.section-img__podium___mask.section-img__mask
-		.section__block__container
-			+block-text('Ресторан шведской <br> линии «Подиум»', ['Свежие овощи, фрукты и зелень, разнообразие блюд из рыбы, мяса и птицы, холодные закуски и салаты, вкусные десерты, сладости и выпечка от шеф-кондитера;',
-				"- Алкогольные напитки без ограничений: красное, белое, игристые вина, пиво, водка - на обед и ужин",
-				"- Безалкогольные напитки: кофе, чай, соки;<br> - Мороженное в ассортименте"])
-
-	section.section-img.section-img__halls-gallery
-		.section-img__mask.section-img__halls-gallery___mask
-		.block-halls.section__block.clearfix
-			.block-text
-				.block-text__title Банкетный зал «Галерея»
-				.block-text__content
-					p.block-text__content___p Просторное помещение с колоннами и благородным интерьером идеально для проведения частных и деловых <strong>VIP</strong> - мероприятий, презентаций, фуршетов и банкетов. <br> <br> В зале присутствует естественное и искусственное освещение, возможна произвольная расстановка столов и стульев. <br> <br> Вместимость до 60 человек, площадь 213 кв.м.
-			.block-halls__plan___wrapper
-				.block-halls__plan___title Планы рассадки
-				+block-halls__plan(['tild6165-3362-4233-b832-343639356266__35.png',
-					'tild3932-3266-4264-b035-666330383834__60.png'])
-
-	section.section-img.section-img__halls-coffee
-		.section-img__mask.section-img__halls-coffee___mask
-		.block-halls.section__block.clearfix
-			.block-text
-				.block-text__title Кофе-брейки
-				.block-text__content
-					p.block-text__content___p В меню могут быть лёгкие закуски, канапе и тарталетки, пирожные и сладости, ароматный чай, кофе и даже шампанское! <br> <br> Кофе-паузу сервируют в фойе, или, по желанию заказчика, она может быть организована в зале, где проводится мероприятие.
-			.block-halls__plan___wrapper
-				.block-halls__plan___title_coffee <span class="font50">от</span> 260₽
-				.block-halls__plan___desc Для 1 участника
-
-	section.section-img.section-img__barbecui
-		.section-img__barbecui___mask.section-img__mask
-		.section__block__container
-			+block-text('Зона барбекю', ['5 маленьких беседок до 8 человек,',
-			"1 большая беседка до 20 человек,",
-			"Зона барбекю до 100 человек"])
-	section.section-barbecui_photos.block-columns.clearfix.popup-container_img
-		+block-columns__item("tild6432-6262-4534-a532-313730356162__1122.jpg")
-		+block-columns__item("/tild3832-3438-4135-b566-646231663561__pit94b3.jpg")
-		+block-columns__item("tild6131-3530-4139-b835-303234336432__cda52ce311a84accb09462a798fe3b00.jpg")
-
-	//Форма - получить специальные тарифы
-	include  ../sections/form-spectarif.pug
-
-	section.section-grey#entertainment
-		.section-grey_block
-			+block-text('Развлечения и спорт',
-      ['Для любителей активного отдыха есть все возможные развлечения на свежем воздухе:',
-          'прокат горных и прогулочных велосипедов с детским сиденьем, беговелы, самокаты, бадминтон, крокет, мини-гольф, баскетбол, волейбол, роликовые коньки и многое другое.',
-          'В отеле работает пункт проката, где Вы можете взять необходимое оборудование и спортивный инвентарь.Услуги пункта проката входят в стоимость проживания.<br><br><br>'])
-			.block-columns.clearfix.popup-container_img
-				+block-columns__item('tild6537-3030-4262-b839-636132313734__pool.jpg')
-				+block-columns__item('tild3334-3865-4838-b731-326465386362__deti_2.jpg')
-				+block-columns__item('yoga1.jpg')
-
-	section.section-img.section-img__football
-		.section-img__football___mask.section-img__mask
-		.section__block__container
-			+block-text('Площадка для игры в волейбол и баскетбол, футбольное поле, мини - гольф',
-			['Универсальная площадка для игры в волейбол и баскетбол расположена рядом с футбольным полем.',
-			"Представляет собой прямоугольное игровое пространство размером 15*30 метров с комбинированной разметкой для игры в волейбол и баскетбол. Площадка оборудована волейбольной сеткой, щитами с баскетбольными кольцами, освещением в темное время суток, а также профессиональным напольным покрытием из резиновой крошки толщиной 10мм.",
-			"Футбольное поле расположено в лесной зоне отеля LES Art Resort. Игровое пространство представляет собой прямоугольную площадку размером 20*40 метров с соответствующей разметкой, воротами и защитным ограждением, покрытое искусственным всесезонным газоном с засыпкой кварцевым песком.",
-			"Площадка для мини-гольфа, расположенная на территории нашего отеля - это отличное место для всех любителей активного отдыха в Подмосковье. К тому же это отличное средство для расслабления и возможность отвлечься от повседневности.<br>          Поле доступно всем желающим, игра в мини - гольф пополнила перечень услуг нашего отеля, входящих в систему «Все включено». Клюшки и мячи вы можете бесплатно взять в пункте проката."])
-
-	section.section-img.section-img__spa#spa
-		.section-img__spa___mask.section-img__mask
-		.section__block__container
-			+block-text('SPA зона',
-      ['В SPA-отеле LES Art Resort созданы все условия для тех, кто хочет провести время с пользой для души и тела.'])
-			p.block-text__content___p.no-margin К услугам гостей:
-			ul.block-text__list
-				li.block-text__list__item 50-метровый бассейн Олимпийского формата;
-				li.block-text__list__item термальные зоны, фитобар;
-				li.block-text__list__item различные методики массажа;
-				li.block-text__list__item популярные SPA-программы;
-				li.block-text__list__item имиджевая beauty-зона;
-				li.block-text__list__item зона отдыха «Искусственное солнце»;
-				li.block-text__list__item современный фитнес-центр;
-				li.block-text__list__item зал для занятий йогой.
-
-	section.section-img.section-img__open-pool
-		.section-img__open-pool___mask.section-img__mask
-		.section__block__container
-			+block-text('Открытый бассейн',
-      ['Комплекс LAGUNA представляет собой отдельно стоящее сооружение с панорамным остеклением и общей площадью 1000 квадратных метров.',
-			"Комплекс гармонично вписан в естественный природный ландшафт отеля LES Art resort и теперь составляет единый архитектурный ансамбль с открытым водоемом. <br> <br>",
-			"Время работы с 9.00-21.00.<br> Размер – 30x20 м.",])
-
-	section.section-grey#rooms
-		.section-grey_block
-			+block-text('Номерной фонд',
-      ['Отель LES Art Resort – это 250 однокомнатных номеров пяти категорий: Standard, Simple suite, Panorama suite, Classic suite и Classic suite+, а также 10 коттеджей (категория Villa). Какую бы категорию Вы ни выбрали, к Вашим услугам кондиционер, сейф, плазменный телевизор со спутниковыми каналами и бесплатный Wi-Fi.',
-          'Корпуса и коттеджи построены из дерева хвойных пород, хранящего тонкий аромат соснового леса. В оформлении сделан акцент на современный дизайн и экологичные материалы. Большие окна наполняют пространство комнат светом и воздухом.'])
-			.block-columns.clearfix.popup-container_img
-				+block-columns__item('tild3665-6462-4630-b236-656333626636__lesfoto41.jpg')
-				+block-columns__item('tild3738-3064-4163-b466-343763393863__lesfoto43.jpg')
-				+block-columns__item('tild3363-3736-4362-b234-616239383866__villa4.jpg')
+		.l-footer.l-footer_welcome © #{name} | создано с любовью в LoftSchool | 2017

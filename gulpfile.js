@@ -28,11 +28,13 @@ $.gulp.task('default', $.gulp.series(
     'sass',
     'pug',
     'js:foundation',
-      'copyBowerFiles',
+    'copyBowerFiles',
     'js:process',
     'copy:image',
     'copy:fonts',
-    'css:foundation'
+    'css:foundation',
+    'sprite:svg',
+    'sprite'
   ),
   $.gulp.parallel(
     'watch',

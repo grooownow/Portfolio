@@ -1,0 +1,133 @@
+.maincontent_welcome
+	background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, rgba(2,2,2,0) 24%), linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(2,2,2,0) 24%), url('../images/water.jpg') no-repeat
+	background-size: cover
+.l-welcome
+	height: 100vh
+	display: flex
+	justify-content: center
+	align-items: center
+	position: relative
+.c-auth__link
+	position: absolute
+	top: 20px
+	right: 20px
+	display: block
+	border: 2px solid #fff
+	padding: 12px 30px
+	border-radius: 25px
+	color: #fff
+	font-family: 'Roboto Medium'
+	text-decoration: none
+	transition: $transition
+	&:hover
+		background: $bg-btn_hover_transp
+		border: 2px solid $bg-btn_hover_transp
+		cursor: pointer
+		text-decoration: none
+
+.l-hero__container_welcome
+	background: rgba(18, 38, 32, 0.6)
+	border-radius: 0 0 5px 5px
+
+.c-socials_welcome
+	text-align: center
+	margin: 0 auto 30px
+.c-socials__pic_welcome
+	fill: $bg-grey_transp
+	transition: $transition
+	&:hover
+		fill: $bg-btn_hover_transp
+
+.l-nav_welcome, .l-nav_auth
+	border-radius: 0 0 5px 5px
+	background: rgba(97, 144, 85, .65)
+
+.l-nav_welcome__list, .l-nav_auth__list
+	display: flex
+	justify-content: space-between
+	align-items: center
+	align-content: center
+.l-nav_welcome__item, .l-nav_auth__item
+	display: inline-block
+	padding: 12px 10px
+	flex: 1
+	border-left: 2px solid rgba(222, 227, 231, 0.502)
+	transition: $transition
+	&:first-child
+		border-left: 0
+		border-radius: 0 0  0 5px
+	&:last-child
+		-webkit-border-radius:
+		-moz-border-radius:
+		border-radius: 0 0 5px 0
+	&:hover
+		background: $bg-btn_hover
+		cursor: pointer
+.l-nav_welcome__link, .l-nav_auth__link
+	color: #fff
+	text-decoration: none
+	font-family: 'Roboto medium'
+
+.c-auth
+	margin-bottom: 30px
+.c-auth__title
+	font-size: 35px
+	font-family: 'Sansus Webissimo Regular'
+	&:after
+		content: ''
+		display: block
+		width: 20%
+		margin: 0 auto
+		padding-top: 12px
+		margin-bottom: 20px
+		border-bottom: 3px solid #fff
+.c-auth__form
+	margin-bottom: 30px
+.c-auth__inp
+	display: block
+	width: 70%
+	margin: 0 auto
+	padding: 12px 12px 12px 50px
+	border-radius: 25px
+	background: #fff
+	border: 0
+	margin-bottom: 15px
+.c-auth__wrapper-inp
+	margin-bottom: 10px
+.c-auth__checkbox
+	width: 20px
+	height: 20px
+	background: #fff
+	&:checked
+		background: $bg-btn_hover
+.c-auth_question
+	margin-bottom: 10px
+
+.flip-container
+	perspective: 1000
+//.flip-container:hover .flipper, .flip-container.hover .flipper
+	transform: rotateY(180deg)
+.flip-container, .front, .back
+	width: 320px
+	height: 480px
+.flipper
+	transition: 1s
+	transform-style: preserve-3d
+	position: relative
+.front, .back
+	backface-visibility: hidden
+	position: absolute
+	top: 0
+	left: 0
+.front
+	z-index: 2
+.back
+	transform: rotateY(180deg)
+
+.l-footer_welcome
+	color: #fff
+	text-align: center
+	padding: 20px
+
+
+

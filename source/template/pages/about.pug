@@ -1,0 +1,49 @@
+extends ../about
+
+block title
+	title #{name} | Портфолио
+
+
+block content
+	section.l-section.l-hero
+		+socials('c-socials_about', ['vk', 'github', 'in'], ['https://vk.com/kate_kro', 'https://github.com/Ludvik4', '#'])
+		.page-menu
+			svg.page-menu__icon
+				use(xlink:href='./assets/images/sprite.svg#hamburger')
+			+nav('l-nav_pages', ['Мои работы', 'Обо мне', 'Блог'], ['/works.html', '/about.html', '/blog.html'])
+
+		.c-hero__bg
+			svg.c-hero_svg-about
+				use(xlink:href='./assets/images/sprite.svg#about_header')
+		.l-hero__container
+			.c-user.c-user_pages
+				img.c-user__pic.c-user__pic_pages(src='/assets/images/user.jpg', alt=`${name}`)
+				.c-user__name #{name}
+				.c-user__occ личныsй сайт веб-разработчика
+
+	section.l-section.l-about
+		.l-about__col.l-about__col_left
+			svg.c-about__triangle.c-about__triangle_left
+				polygon(points='0,0 1000,110 0,110')
+			.c-section-title
+			.c-about
+				.c-about__pic
+				.c-block-title
+				.c-block-text
+
+		.l-about__col.l-about__col_right
+			.l-skills
+				.c-block-title
+				.l-skills__text
+					p
+					p
+					p
+				ul.l-skills-group
+					li.l-skills-group__item
+						.c-skills-group__title Frontend
+						ul.l-skills-list
+							li.l-skills-list__item
+								.c-skill
+									svg.c-skill__circle
+									.c-skill__title
+	section.l-section.l-map

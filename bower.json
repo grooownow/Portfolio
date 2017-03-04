@@ -6,7 +6,7 @@
     "E/Pustovaya"
   ],
   "license": "ISC",
-  "homepage": "https://github.com/Ludvik4/maot_landinds",
+  "homepage": "https://github.com/Ludvik4/HomeWork2",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -16,9 +16,6 @@
   ],
   "dependencies": {
     "jquery": "^3.1.1",
-    "bootstrap": "^3.3.7",
-    "magnific-popup": "^1.1.0",
-    "jquery-single-page-nav": "*",
-    "jquery-touchswipe": "^1.6.18"
+    "bootstrap": "^3.3.7"
   }
 }
