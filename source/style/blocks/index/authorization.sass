@@ -1,0 +1,73 @@
+.authorization__link
+	position: absolute
+	top: 20px
+	right: 20px
+	display: block
+	border: 2px solid #fff
+	padding: 12px 30px
+	border-radius: 25px
+	color: #fff
+	font-family: 'Roboto Medium'
+	text-decoration: none
+	transition: $transition
+	&:hover
+		background: $green_transp
+		border: 2px solid $green_transp
+		cursor: pointer
+		text-decoration: none
+
+.authorization
+	margin-bottom: 30px
+.authorization__title
+	font-size: 35px
+	font-family: 'Sansus Webissimo Regular'
+	&:after
+		content: ''
+		display: block
+		width: 20%
+		margin: 0 auto
+		padding-top: 12px
+		margin-bottom: 20px
+		border-bottom: 3px solid #fff
+.authorization__form
+	margin-bottom: 30px
+.authorization__wrapper-inp
+	margin-bottom: 10px
+
+.authorization__inp
+	display: block
+	width: 70%
+	margin: 0 auto
+	padding: 12px 12px 12px 50px
+	border-radius: 25px
+	background: #fff
+	border: 0
+	margin-bottom: 15px
+.authorization__label
+	position: relative
+	display: block
+	width: 100%
+.inp-icon
+	position: absolute
+	+centered(y)
+	width: 36px
+	height: 20px
+	left: 26px
+	z-index: 25
+	background: #f0efe9
+	padding: 10px 5px
+	fill: $bg-grey
+	-webkit-border-radius:
+	-moz-border-radius:
+	border-radius: 25px 0 0 25px
+	+phone
+		left: 14px
+
+.authorization__checkbox
+	width: 20px
+	height: 20px
+	background: #fff
+	&:checked
+		background: $bg-btn_hover
+.authorization__question
+	margin-bottom: 10px

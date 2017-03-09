@@ -1,0 +1,61 @@
+//media
+=desktop
+	@media (max-width: 1200px)
+		@content
+=tablet
+	@media (max-width: 768px)
+		@content
+=phone
+	@media (max-width: 480px)
+		@content
+
+=centered($axis: 'both')
+	position: absolute
+	@if ($axis == 'both')
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+	@if $axis == 'x'
+		left: 50%
+		transform: translateX(-50%)
+	@if $axis == 'y'
+		top: 50%
+		transform: translateY(-50%)
+
+%clearfix
+	&:after
+		content: ""
+		display: block
+		clear: both
+
+=title($size: 'big')
+	text-align: center
+	text-transform: uppercase
+	font-family: $sansus
+	margin-bottom: 20px
+	&:after
+		content: ""
+		display: block
+		width: 90px
+		height: 3px
+		+centered(x)
+		@if $size == 'big'
+			background: $f-dark-green
+		@if $size == 'medium'
+			background: $f-green
+		@if $size == 'small'
+			height: 0px
+	@if $size == 'big'
+		font-size: 63px
+		color: $f-dark-green
+	@if $size == 'medium'
+		color: $f-green
+		font-size: 35px
+	@if $size == 'small'
+		font-family: 'roboto medium'
+		font-size: 28px
+		color: $f-green
+		text-transform: none
+
+=transition
+	transition: $transition

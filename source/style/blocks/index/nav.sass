@@ -1,0 +1,29 @@
+.nav_welcome, .nav-authorization
+	border-radius: 0 0 5px 5px
+	background: rgba(97, 144, 85, .65)
+
+.nav_welcome__list, .nav-authorization__list
+	display: flex
+	justify-content: space-between
+	align-items: center
+	align-content: center
+.nav_welcome__item, .nav-authorization__item
+	display: inline-block
+	padding: 12px 10px
+	flex: 1
+	border-left: 2px solid rgba(222, 227, 231, 0.502)
+	transition: $transition
+	&:first-child
+		border-left: 0
+		border-radius: 0 0  0 5px
+	&:last-child
+		-webkit-border-radius:
+		-moz-border-radius:
+		border-radius: 0 0 5px 0
+	&:hover
+		background: $green_transp
+		cursor: pointer
+.nav_welcome__link, .nav-authorization__link
+	color: #fff
+	text-decoration: none
+	font-family: 'Roboto medium'

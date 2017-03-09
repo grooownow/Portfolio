@@ -1,0 +1,36 @@
+
+.skills__text
+	margin-bottom: 50px
+
+.skills-group__title
+	margin-bottom: 15px
+	text-align: left
+.skills-list
+	display: flex
+	flex-flow: row wrap
+	margin-bottom: 30px
+.skills-list__item
+	position: relative
+	display: inline-block
+	margin-right: 30px
+	margin-bottom: 10px
+	&:last-child
+		margin-left: 0
+
+.skills__circle
+	width: 100px
+	height: 100px
+	display: block
+	fill: transparent
+	stroke-width: 15px
+.skills__title
+	position: absolute
+	width: 65%
+	text-align: center
+	font-size: 12px
+	+centered
+.skills__circle-under
+	stroke: #dfdcd5
+.skills__circle-above
+	stroke: $green
+	stroke-dasharray: (80 * 3.14 * .55) (80 * 3.14)

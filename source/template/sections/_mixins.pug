@@ -6,13 +6,13 @@ mixin nav(className, items, hrefs)
 					a(class=`${className}__link` href=`${hrefs[ndx]}`)= item
 
 mixin socials(className,socials, hrefs)
-	ul(class='c-socials ' + `c-socials_${className}`)
+	ul(class='socials ' + `socials_${className}`)
 		each social, ndx in socials
-			li(class='c-socials__item ' + `c-socials__item_${className}`)
-				a(class='c-socials__link ' + `c-socials__link_${social}` href=`${hrefs[ndx]}`, target='_blank')
-					svg(class='c-socials__pic ' + `c-socials__pic_${className}`)
+			li(class='socials__item ' + `c-socials__item_${className}`)
+				a(class='socials__link ' + `socials__link_${social}` href=`${hrefs[ndx]}`, target='_blank')
+					svg(class='socials__pic ' + `socials__pic_${className}`)
 						use(xlink:href=`./assets/images/sprite.svg#${social}`)
 
 mixin hero__bg(svgName)
-	div(class='.c-hero__bg ' + `c-hero__bg_${svgName}`)
+	div(class='hero__bg ' + `hero__bg_${svgName}`)
 

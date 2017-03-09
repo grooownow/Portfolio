@@ -1,0 +1,20 @@
+
+-
+   var skills={
+   Frontend:['HTML5','CSS3','JavaScript & jQuery'],
+   Backend:['PHP', 'mySQL','Node.js & npm', 'Mongo.db'],
+   Workflow:['Git','Gulp','Bower']
+   }
+.skills
+   .block-title Чем я могу быть	вам полезна
+   .skills__text
+      p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+   each skillGroup, key in skills
+      .skills-group__title= key
+      ul.skills-list
+         each value in skillGroup
+            li.skills-list__item
+               svg.skills__circle
+                  circle(cx="50" cy="50" r="40").skills__circle-under
+                  circle(cx="50" cy="50" r="40").skills__circle-above
+               .skills__title= value

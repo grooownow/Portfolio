@@ -1,42 +1,36 @@
 extends ../layout
 
-block title
-
 block content
-	.maincontent.maincontent_welcome
-		.l-section.l-welcome
-			a.c-auth__link(href='#') Авторизироваться
-			.flip-container
-				.flipper
-					.front
-						.l-hero__container.l-hero__container_welcome
-							.c-user
-								img.c-user__pic(src='/assets/images/user.jpg', alt=`${name}`)
-								.c-user__name #{name}
-								.c-user__occ личный сайт веб-разработчика
-							+socials('welcome', ['vk', 'github', 'in'], ['https://vk.com/kate_kro', 'https://github.com/Ludvik4', '#'])
-							+nav('l-nav_welcome', ['Мои работы', 'Обо мне', 'Блог'], ['/works.html', '/about.html', '/blog.html'])
-					.back
-						.l-hero__container.l-hero__container_welcome
-							.c-auth
-								.c-auth__title Авторизируйтесь
-								form.c-auth__form#auth(method='post')
-									input.c-auth__inp(name='login', type='text', require='', placeholder='Логин')
-									input.c-auth__inp(name='password', type='password', require='', placeholder='Пароль')
-									.c-auth__wrapper-inp
-										input.c-auth__checkbox(type='checkbox')
-										span.c-auth__checkbox_desc Я человек
-									.c-auth_question Вы точно человек?
-									.c-auth__wrapper-inp
-										input.c-auth__radio(type='radio', name='answer', value='human')
-										span.c-auth__checkbox_desc Да
-										input.c-auth__radio(type='radio', name='answer', value='other')
-										span.c-auth__checkbox_desc Не уверен
-									.l-nav_auth
-										ul.l-nav_auth__list
-											li.l-nav_auth__item
-												a.l-nav_auth__link(href='#') На главную
-											li.l-nav_auth__item
-												a.l-nav_auth__link(href='#', type='submit') Войти
+	.wrapper
+		.maincontent.maincontent-welcome
+			.section-welcome
+				a.authorization__link(href='#') Авторизироваться
+				.flip-container
+					//.flipper
+					.flip__item.flip__item-welcome.front
+						include ../sections/user
+						+socials('welcome', ['vk', 'github', 'in'], ['https://vk.com/kate_kro', 'https://github.com/Ludvik4', '#'])
+						+nav('nav_welcome', ['Мои работы', 'Обо мне', 'Блог'], ['/works.html', '/about.html', '/blog.html'])
+					.flip__item.flip__item-welcome
+						.authorization__title Авторизируйтесь
+						form.authorization__form#auth(method='post')
+							label.authorization__label
+								svg.inp-icon
+									use(xlink:href="assets/images/sprite.svg#login")
+								input.authorization__inp(name='login', type='text', require='', placeholder='Логин')
+							label.authorization__label
+								svg.inp-icon
+									use(xlink:href="assets/images/sprite.svg#password")
+								input.authorization__inp(name='password', type='password', require='', placeholder='Пароль')
+							.authorization__wrapper-inp
+								input.c-auth__checkbox(type='checkbox')
+								span.authorization__checkbox_desc Я человек
+							.authorization__question Вы точно человек?
+							.authorization__wrapper-inp
+								input.authorization__radio(type='radio', name='answer', value='human')
+								span.authorization__checkbox_desc Да
+								input.authorization__radio(type='radio', name='answer', value='other')
+								span.authorization__checkbox_desc Не уверен
+						+nav('nav-authorization', ['На главную', 'Войти'], ['/', '#'])
 
-		.l-footer.l-footer_welcome © #{name} | создано с любовью в LoftSchool | 2017
+			.footer.footer_welcome © #{name} | создано с любовью в LoftSchool | 2017
