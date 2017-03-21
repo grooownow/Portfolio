@@ -1,15 +1,8 @@
-header.hero
+header.header
 
     +socials('header', ['vk', 'github', 'in'], ['https://vk.com/kate_kro', 'https://github.com/Ludvik4', '#'])
-    a.arrow-down(href="#")
-        svg.arrow-down-icon
-            use(xlink:href="assets/images/sprite.svg#arrow_down")
+    +arrow('down', `#${pageName}`)
 
     include ../sections/menu
+    include ../sections/hero
 
-    .hero__bg
-        img(src="assets/images/water.jpg" alt="").hero__bg-img
-    .hero__container
-        svg.hero-title-pic
-            use(xlink:href="assets/images/sprite.svg#about_header")
-        include ../sections/user

@@ -1,0 +1,90 @@
+.section-title__wrap_reviews
+	width: 70%
+	margin: 15px auto
+	max-width: 600px
+
+.section-reviews
+	min-height: 100vh
+	padding-bottom: 150px
+.reviews__wrap
+	position: relative
+.blur__bg
+	+abs-cover
+	min-width: 100%
+
+.col-review__wrap
+	position: relative
+	display: flex
+	width: 70%
+	max-width: 770px
+	margin: 0 auto
+	flex-direction: row
+	flex-wrap: wrap
+	justify-content: space-between
+.col-review
+	+column
+	flex: 1 1 250px
+	text-align: center
+	padding: 0 10px
+	margin-bottom: 40px
+.review-user
+	width: 93px
+	height: 93px
+	border-radius: 50%
+	overflow: hidden
+	margin: 20px auto
+	color: $f-dark-green
+.review-user__pic
+	width: 100%
+.review-user__text
+	text-align: center
+	margin-bottom: 20px
+	background: url("../images/quote.png") top left no-repeat
+.review-user__name
+	color: $green
+	font-family: $roboto-b
+
+
+.review-form__wrap
+	margin: 0 auto
+	width: 400px
+	margin-bottom: 30px
+	position: relative
+	overflow: hidden
+.blur
+	background: url("../images/reviews-bg.jpg")
+	filter: blur(7px)
+	+abs-cover
+	z-index: 0
+
+.review-form
+	padding-top: 20px
+	border-radius: 5px
+	position: relative
+	z-index: 1
+.review-form__title
+	+title('medium')
+.review-form__inp, .review-form__textarea
+	border-radius: 15px
+	background: $white
+	width: 80%
+	margin: 0 auto
+	margin-bottom: 20px
+	padding: 15px 15px
+	display: block
+	box-sizing: border-box
+.review-form__inp
+.review-form__textarea
+	height: 200px
+.review-form__footer
+	@extend.nav_welcome__list
+.review-form__btn
+	@extend.nav_welcome__item
+	background: $green_transp
+	padding: 15px
+	&:hover
+		background: $bg-btn_hover
+
+.empty
+	height: 150px
+	width: 100%

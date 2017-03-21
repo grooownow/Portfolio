@@ -2,6 +2,9 @@
 =desktop
 	@media (max-width: 1200px)
 		@content
+=laptop
+	@media (max-width: 992px)
+		@content
 =tablet
 	@media (max-width: 768px)
 		@content
@@ -33,6 +36,7 @@
 	text-transform: uppercase
 	font-family: $sansus
 	margin-bottom: 20px
+	position: relative
 	&:after
 		content: ""
 		display: block
@@ -48,14 +52,40 @@
 	@if $size == 'big'
 		font-size: 63px
 		color: $f-dark-green
+		+phone
+			font-size: 36px
 	@if $size == 'medium'
 		color: $f-green
 		font-size: 35px
+		+phone
+			font-size: 30px
 	@if $size == 'small'
-		font-family: 'roboto medium'
+		font-family: $roboto-m
 		font-size: 28px
 		color: $f-green
 		text-transform: none
 
 =transition
 	transition: $transition
+
+=dark-gradient
+	&:after
+		content: ""
+		display: block
+		position: absolute
+		top: 0px
+		left: 0px
+		right: 0px
+		height: 200px
+		z-index: 1
+		background: linear-gradient(to bottom, rgba(0,0,0,0.7)0%,rgba(2,2,2,0)100%)
+
+=column
+	flex: 1 1 364px
+
+=abs-cover
+	position: absolute
+	top: 0px
+	left: 0
+	bottom: 0px
+	right: 0

@@ -1,0 +1,19 @@
+extends ../layout
+
+block variables
+	-var name = 'Екатерина Пустовая'
+	-var pageName = 'works'
+
+block title
+	| #{name} | Портфолио
+
+block content
+	.wrapper
+		.maincontent
+			include ../sections/header
+
+			include ../common/works/works
+
+			include ../common/works/reviews
+
+		include ../sections/footer

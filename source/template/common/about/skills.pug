@@ -5,17 +5,20 @@
    Backend:[['PHP', '.2'], ['mySQL', '.3', '.6'],['Node.js & npm', '.3'], ['Mongo.db', '.2', '.6']],
    Workflow:[['Git', '.5'],['Gulp', '.5'],['Bower', '.6']]
    }
-.skills
-   .block-title Чем я могу быть	вам полезна
-   .skills__text
-      p Больше всего меня привлекет Frontend разработка, но я также знакома и могу решать не сложные задачи на Backend. Но давайте по порядку.
-   each skillGroup, key in skills
-      .skills-group__title= key
-      ul.skills-list
-         each value in skillGroup
-            - var strokeLength = 80 * 3.14 * `${value[1]}`
-            li.skills-list__item
-               svg.skills__circle
-                  circle(cx="50" cy="50" r="40").skills__circle-under
-                  circle(cx="50" cy="50" r="40" transform="rotate(-90 50 50)" opacity=`${value[2]}` stroke-dasharray= `${strokeLength} 251.2`).skills__circle-above
-               .skills__title= value[0]
+.about__col.about__col_right
+   svg(viewbox="0 0 1000 110" preserveAspectRatio="none").about__triangle
+      polygon(points="0,110 1000,110 1000,0")
+   .skills
+      .block-title Чем я могу быть	вам полезна
+      .skills__text
+         p Больше всего меня привлекет Frontend разработка, но я также знакома и могу решать не сложные задачи на Backend. Но давайте по порядку.
+      each skillGroup, key in skills
+         .skills-group__title= key
+         ul.skills-list
+            each value in skillGroup
+               - var strokeLength = 80 * 3.14 * `${value[1]}`
+               li.skills-list__item
+                  svg.skills__circle(viewBox="0 0 100 100" preserveAspectRatio="none")
+                     circle(cx="50" cy="50" r="40").skills__circle-under
+                     circle(cx="50" cy="50" r="40" transform="rotate(-90 50 50)" opacity=`${value[2]}` data-stroke-dasharray= `${strokeLength} 251.2` stroke-dasharray= '0 251.2').skills__circle-above
+                  .skills__title= value[0]

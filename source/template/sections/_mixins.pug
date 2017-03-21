@@ -13,6 +13,12 @@ mixin socials(className,socials, hrefs)
 					svg(class='socials__pic ' + `socials__pic_${className}`)
 						use(xlink:href=`./assets/images/sprite.svg#${social}`)
 
-mixin hero__bg(svgName)
-	div(class='hero__bg ' + `hero__bg_${svgName}`)
+mixin arrow(className, anchor)
+	a(class='arrow ' + `arrow_${className}`, href=`${anchor}`)
+		svg.arrow-icon
+			use(xlink:href='assets/images/sprite.svg#arrow_down')
+
+mixin triangle(className)
+	svg(viewbox="0 0 2000 110" preserveAspectRatio="none", class='triangle ' + `${className}__triangle`)
+		polygon(points="0,0 0,110 2000,110 2000,0 1000,110")
 

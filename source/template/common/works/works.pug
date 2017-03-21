@@ -1,0 +1,41 @@
+
+section(class=`section section-${pageName}`, id=`${pageName}`)
+   +triangle(`${pageName}`)
+   .section-title__wrap
+      h1.section-title Мои работы
+      svg.section-title__bg
+         use(xlink:href="assets/images/sprite.svg#works_header")
+   .works.examples
+      .works__col.works__col-left
+         .works-info.examples__part
+            .examples__content-part
+               .examples__title #{works[0].title}
+               .examples__subtitle #{works[0].technologies}
+               .examples__link-wrapper
+                  a(href=`${works[0].link}`).examples__link
+                     i(aria-hidden="true").fa.fa-link.examples__icon
+                     | Посмотреть сайт
+
+      .works__col.works__col-right
+         .works-slider.examples__part.examples__preview
+            img(src=`${works[0].img}`).examples__preview-img
+
+         .works-slider__trigger.examples__part.examples__slider.slider
+            .slider__part.slider__part--down
+               a(href="#").slider__arrow.slider__arrow--down
+                  svg.slider__arrow-img.slider__arrow-img--down
+                     use(xlink:href=`./assets/images/sprite.svg#arrow_down`)
+               each work, index in works
+                  - var active = ""
+                  if index == ( works.length - 1 )
+                     - active = "slider__preview--active"
+                  img(src=`${work.img}` class=`slider__preview ${active}` data-title=`${work.title}` data-tech=`${work.technologies}` data-href=`${work.link}`)
+            .slider__part.slider__part--up
+               a(href="#").slider__arrow.slider__arrow--up
+                  svg.slider__arrow-img.slider__arrow-img--up
+                     use(xlink:href=`./assets/images/sprite.svg#arrow_down`)
+               each work, index in works
+                  - var active = ""
+                  if index == 1
+                     - active = "slider__preview--active"
+                  img(src=`${work.img}` class=`slider__preview ${active}` data-title=`${work.title}` data-tech=`${work.technologies}` data-href=`${work.link}`)

@@ -1,31 +1,23 @@
 extends ../layout
 
+block variables
+	-var name = 'Екатерина Пустовая'
+	-var pageName = 'about'
+
 block title
-	| #{name} | Портфолио
+	| #{name} | Обо мне
 
 block content
 	.wrapper
-		include ../sections/header
+		.maincontent
+			include ../sections/header
 
-		section.section.about
-			.about__col.about__col_left
-				svg(viewbox="0 0 1000 110" preserveAspectRatio="none").about__triangle
-					polygon(points="0,0 0,110 1000, 110")
-				h1.section-title(style="background-image: url('assets/images/sprite/about_header.svg')")
-					| Обо мне
-				img.about__pic(src='/assets/images/userbig.jpg')
-				.block-title Кто я
-				.block-text
-					p Я занимаюсь веб-разработкой с 2016 года. Мне 31 год и на данный момент я живу в Москве. Мне нравится делать интересные и современные проекты.
-					p Этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я обновлю в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
-
-			.about__col.about__col_right
-				svg(viewbox="0 0 1000 110" preserveAspectRatio="none").about__triangle
-					polygon(points="0,110 1000,110 1000,0")
-
+			section.section.about(id=`${pageName}`)
+				include ../common/about/about
 				include ../common/about/skills
 
-		section.section.map
-			#map
+	include ../common/about/contacts
 
 	include ../sections/footer
+
+	script(async defer src="//maps.googleapis.com/maps/api/js?key=AIzaSyDIYoDNxzy_AcBOF7llhb3v8BIm7_9KKsA&callback=initMap")

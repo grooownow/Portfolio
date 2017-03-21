@@ -1,3 +1,34 @@
+extends ../layout
+
+block variables
+	-var name = 'Екатерина Пустовая'
+	-var pageName = 'blog'
+block title
+	| #{name} | Блог
+
+block content
+	.wrapper
+		.maincontent
+			header.header.header_blog
+				+socials('header', ['vk', 'github', 'in'], ['https://vk.com/kate_kro', 'https://github.com/Ludvik4', '#'])
+				include ../sections/menu
+				.hero__bg
+				.hero__container
+					svg.hero-title-pic
+						use(xlink:href="assets/images/sprite.svg#blog_header")
+					.user
+						.user__pic-container
+							img.c-user__pic(src='/assets/images/user.jpg', alt=`${name}`)
+						.user__title Блог
+						.user__desc статьи, которыми я хочу поделиться
+				+arrow('down', `#${pageName}`)
+				+triangle('blog')
+
+			include ../common/blog/_articles
+
+			include ../common/blog/blog
+
+	include ../sections/footer
 
 
 

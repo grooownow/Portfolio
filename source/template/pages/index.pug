@@ -3,34 +3,19 @@ extends ../layout
 block content
 	.wrapper
 		.maincontent.maincontent-welcome
+			.Background
+				canvas.Background-canvas
 			.section-welcome
 				a.authorization__link(href='#') Авторизироваться
 				.flip-container
-					//.flipper
-					.flip__item.flip__item-welcome.front
-						include ../sections/user
-						+socials('welcome', ['vk', 'github', 'in'], ['https://vk.com/kate_kro', 'https://github.com/Ludvik4', '#'])
-						+nav('nav_welcome', ['Мои работы', 'Обо мне', 'Блог'], ['/works.html', '/about.html', '/blog.html'])
-					.flip__item.flip__item-welcome
-						.authorization__title Авторизируйтесь
-						form.authorization__form#auth(method='post')
-							label.authorization__label
-								svg.inp-icon
-									use(xlink:href="assets/images/sprite.svg#login")
-								input.authorization__inp(name='login', type='text', require='', placeholder='Логин')
-							label.authorization__label
-								svg.inp-icon
-									use(xlink:href="assets/images/sprite.svg#password")
-								input.authorization__inp(name='password', type='password', require='', placeholder='Пароль')
-							.authorization__wrapper-inp
-								input.c-auth__checkbox(type='checkbox')
-								span.authorization__checkbox_desc Я человек
-							.authorization__question Вы точно человек?
-							.authorization__wrapper-inp
-								input.authorization__radio(type='radio', name='answer', value='human')
-								span.authorization__checkbox_desc Да
-								input.authorization__radio(type='radio', name='answer', value='other')
-								span.authorization__checkbox_desc Не уверен
-						+nav('nav-authorization', ['На главную', 'Войти'], ['/', '#'])
+					.flipper
+						.flip__item.flip__item-welcome.front
+							include ../sections/user
+							+socials('welcome', ['vk', 'github', 'in'], ['https://vk.com/kate_kro', 'https://github.com/Ludvik4', '#'])
+							+nav('nav_welcome', ['Мои работы', 'Обо мне', 'Блог'], ['/works.html', '/about.html', '/blog.html'])
+						.flip__item.flip__item-welcome.back
+							include ../common/index/authorization
 
 			.footer.footer_welcome © #{name} | создано с любовью в LoftSchool | 2017
+
+	script(src='assets/js/foundation.js', type="text/javascript")

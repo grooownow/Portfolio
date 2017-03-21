@@ -1,0 +1,62 @@
+.footer
+	position: relative
+	background: rgba(83, 89, 92, .8)
+	font-size: 14px
+	color: $white
+	&-works
+		position: absolute
+		bottom: 0px
+		left: 0px
+		right: 0px
+
+.footer__content
+	padding: 25px
+	display: flex
+	flex-wrap: wrap
+	flex-direction: row
+	justify-content: space-around
+.footer__elem
+	flex: 1 1 170px
+	border-right: 1px solid $bg-grey
+	margin-right: 20px
+	margin-bottom: 10px
+	&:last-child
+		border-right: 0
+		margin-right: 0
+	+phone
+		width: 100%
+		flex: none
+		padding-bottom: 10px
+		border-right: 0px
+		border-bottom: 1px solid $bg-grey
+		&:last-child
+			border-bottom: 0
+			padding-bottom: 0px
+			margin-bottom: 0
+
+.footer__nav
+	font-family: $roboto-m
+.footer__quote-text
+	font-style: italic
+	font-family: $roboto-l
+.nav_footer
+	color: $white
+	margin-bottom: 25px
+	&__item
+		display: inline-block
+		padding: 5px 15px 0 0
+	&__link
+		color: $white
+		text-decoration: none
+.socials_footer
+	.socials__pic_footer
+		transition: .2s
+		fill: rgba(216, 220, 219, 0.65)
+		&:hover
+			fill: $white
+.footer__copyright
+	text-align: center
+	font-family: $roboto-l
+	padding: 10px
+	background: $green_transp
+	color: #fff

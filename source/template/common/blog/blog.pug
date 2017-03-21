@@ -1,0 +1,26 @@
+section.section.blog(id=`${pageName}`)
+   .blog__sidebar
+      ul.sidebar__list
+         each article, key in articles
+            -
+               var className = ''
+               if (key == 'article1')
+               className='sidebar__item active'
+               else
+               className='sidebar__item'
+            li(class= className)
+               a(class="sidebar__link", href=`#${key}`) #{article.title}
+      .sidebar__button
+         svg.sidebar__icon( viewBox="0 0 8 40")
+            circle(cx='-15' cy='20' r='20')
+   .blog__articles
+      ul.articles__list
+         each article, key in articles
+            li.article__item(data-id=key)
+               .article__title #{article.title}
+               .article__date #{article.date}
+               .article__content
+                  each paragraph in article.content
+                     p #{paragraph}
+
+

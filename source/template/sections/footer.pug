@@ -1,7 +1,13 @@
-footer.footer
+footer(class=`footer footer-${pageName}`)
     .container
-        .footer__content Все права защищены
-
-script(src=' assets/libs/jquery.js', type="text/javascript")
-script(async defer src="//maps.googleapis.com/maps/api/js?key=AIzaSyDIYoDNxzy_AcBOF7llhb3v8BIm7_9KKsA&callback=initMap")
-script(src='assets/js/app.js', type="text/javascript")
+        .footer__content
+            .footer__elem
+                .footer__text Этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool.
+            .footer__elem
+                .footer__nav
+                    +nav('nav_footer', ['Мои работы', 'Обо мне', 'Блог', 'Авторизация'], ['/works.html', '/about.html', '/blog.html', '/'])
+                    +socials('footer', ['vk', 'github', 'in'], ['https://vk.com/kate_kro', 'https://github.com/Ludvik4', '#'])
+            .footer__elem
+                .footer__quote-text Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.
+                .footer__quote-author --- Martin Golding
+        .footer__copyright #{name} | Создано в Loftschool | 2017

@@ -1,0 +1,25 @@
+.authorization__title Авторизируйтесь
+form.authorization__form#auth(method='post')
+   label.authorization__label
+      svg.inp-icon
+         use(xlink:href="assets/images/sprite.svg#login")
+      input.authorization__inp(name='login', type='text', require='', placeholder='Логин')
+   label.authorization__label
+      svg.inp-icon
+         use(xlink:href="assets/images/sprite.svg#password")
+      input.authorization__inp(name='password', type='password', require='', placeholder='Пароль')
+   .authorization__wrapper-inp
+      input.c-auth__checkbox#human(type='checkbox')
+      label.authorization__checkbox_desc(for="human") Я человек
+      .authorization__question Вы точно человек?
+   .authorization__wrapper-inp
+      input.authorization__radio#human-yes(type='radio', name='answer', value='human')
+      label.authorization__radio_desc(for="human-yes") Да
+      input.authorization__radio#human-notsure(type='radio', name='answer', value='other')
+      label.authorization__radio_desc(for="human-notsure") Не уверен
+nav.nav.nav-authorization
+   ul.nav-authorization__list
+      li.nav-authorization__item
+         a.nav-authorization__link#home-link(href="#") На главную
+      li.nav-authorization__item
+         a.nav-authorization__link(href="#") Войти

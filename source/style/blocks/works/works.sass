@@ -1,0 +1,107 @@
+.slider
+	&__part
+		flex: 1
+		overflow: hidden
+		position: relative
+		.slider__preview
+			top: 0
+	&__preview
+		max-height: 100%
+		max-width:  120%
+		@include centered('x')
+		z-index: 0
+	&__arrow
+		display: block
+		position: relative
+		width: 100%
+		height: 100%
+		background-color: rgba($white,0.7)
+		z-index: 1
+		&--down
+			background-color: rgba(#b4b9b0, 0.7)
+			&:hover
+				.slider__arrow-img
+					top: 60%
+		&--up
+			background-color: rgba(#a3a79f, 0.7)
+			transform: rotate(180deg)
+			&:hover
+				.slider__arrow-img
+					top: 60%
+		&-img
+			height: 30px
+			+centered()
+			fill: $white
+			transition: top .6s ease-in-out
+			&--up
+
+
+.works__triangle
+	bottom: 100%
+.works__col
+	min-height: 100vh
+	flex: 1 1 300px
+	display: flex
+	flex-direction: column
+	+column
+	&-left
+		background: #ebefe2
+		justify-content: center
+	&-right
+		background: #e1e4d7
+
+.works-slider__trigger
+	display: flex
+	overflow: hidden
+
+.examples
+	display: flex
+	flex-direction: row
+	flex-wrap: wrap
+	justify-content: space-between
+	height: 100vh
+	&__title
+		+title(medium)
+		margin-bottom: 25px
+	&__subtitle
+		+title(small)
+		color: $green
+	&__preview 
+		position: relative
+		width: 100%
+		height: 70%
+		background-color: #e1e4d7
+		//flex: 2
+		&-img
+			max-height: 90%
+			max-width: 115%
+			+centered()
+	&__slider 
+		width: 100%
+		height: 30%
+		//flex: 1
+		flex-direction: row
+	&__link 
+		display: inline-block
+		padding: 15px 20px
+		border-radius: 50px
+		border: 1px solid $green
+		background-color: $green
+		color: white
+		text-decoration: none
+		font-family: $roboto-m
+		font-size: 20px
+		@include phone 
+			font-size: 16px
+			padding: 6px 20px
+		&:hover 
+			border-color: $green_transp
+			background-color: $green_transp
+		&-wrapper 
+			text-align: center
+	&__icon 
+		margin-right: 12px
+
+
+
+

@@ -1,0 +1,113 @@
+.header_blog
+	height: 60vh
+
+.user__title
+	+title('big')
+	color: $white
+	&:after
+		background: $white
+
+.blog
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+	padding: 50px 100px 60px 40px
+	position: relative
+	+laptop
+		padding: 10px
+	+tablet
+		padding: 30px
+
+.blog__sidebar
+	width: 270px
+	position: relative
+	+tablet
+		flex: 0
+		position: fixed
+		z-index: 1000
+		top: 0
+		bottom: 0
+		left: 0
+		width: 350px
+		margin-left: -350px
+		transition: 0.5s
+	&.active
+		margin-left: 0
+		background: $green_transp
+		.sidebar__link
+			color: $white
+		.sidebar__item.active
+			border-right: 3px solid $white
+			.sidebar__link
+					color: $white
+
+
+.blog__sidebar_fixed
+	.sidebar__list
+		position: fixed
+		top: 50px
+		width: 270px
+	.sidebar__button
+		+tablet
+			display: block
+			z-index: 5
+
+//.sidebar__list
+	+tablet
+
+.sidebar__button
+	position: absolute
+	left: 100%
+	top: 100px
+	display: none
+
+.sidebar__icon
+	width: 50px
+	height: 100px
+	fill: $green_transp
+
+.sidebar__item
+	text-align: right
+	padding-right: 10px
+	&.active
+		border-right: 2px solid $green
+		.sidebar__link
+			color: $green
+	
+.sidebar__link
+	text-decoration: none
+	color: $f-green
+	font-family: $roboto-m
+	display: block
+	padding: 10px 0
+
+
+.blog__articles
+	flex: 2
+	text-align: left
+	padding-left: 40px
+	+tablet
+		flex: 1
+
+.article__item
+	padding-bottom: 65px
+	border-bottom: 3px solid $bg-grey_transp
+	margin-bottom: 50px
+	&:last-child
+		border-bottom: 0
+		padding-bottom: 0
+		margin-bottom: 0
+.article__title
+	+title('medium')
+	&:after
+		height: 0
+	width: 100%
+	text-align: left
+	margin-bottom: 0
+.article__date
+	color: #4e8839
+	font-size: 14px
+	margin-bottom: 25px
+.article__content
+	p
+		margin-bottom: 10px

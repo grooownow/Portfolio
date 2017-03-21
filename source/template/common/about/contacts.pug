@@ -1,0 +1,17 @@
+section.section.contacts
+   #map
+   .contacts__block
+      .contacts__title Контакты
+      -
+         var contact= {
+         skype: 'kroklya',
+         envelope2: 'krobox@gmail.com',
+         phone2: '+7 925 658 5352',
+         map_marker: 'Московская обл., Красково, ул. Вокзальная, 19'
+         }
+      ul.contacts__list
+         each key, value in contact
+            li.contacts__item
+               svg.contacts__icon
+                  use(xlink:href=`assets/images/sprite.svg#${value}`)
+               .contacts__text=key

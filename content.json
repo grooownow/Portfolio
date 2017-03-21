@@ -1,0 +1,28 @@
+{
+  "works": [
+    {
+      "img": "./assets/images/work-1.png",
+      "title": "Сайт 1",
+      "technologies": "HTML, CSS, Javascript",
+      "link": "#"
+    },
+    {
+      "img": "./assets/images/work-2.png",
+      "title": "Сайт 2",
+      "technologies": "Wordpress, PHP, CSS, jQuery",
+      "link": "#"
+    },
+    {
+      "img": "./assets/images/work-3.png",
+      "title": "Сайт 3",
+      "technologies": "ModX, HTML, CSS",
+      "link": "#"
+    },
+    {
+      "img": "./assets/images/work-4.png",
+      "title": "Сайт 4",
+      "technologies": "HTML, CSS, Jguery",
+      "link": "#"
+    }
+  ]
+}

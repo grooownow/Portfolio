@@ -1,0 +1,37 @@
+
+.contacts
+	position: relative
+	height: 100vh
+	max-height: 1300px
+
+#map
+	width: 100%
+	height: 120%
+	min-height: 500px
+
+
+.contacts__block
+	padding: 40px
+	background: $white_transp
+	position: absolute
+	max-width: 340px
+	min-width: 290px
+	+centered()
+	+phone
+		padding: 20px 10px
+.contacts__title
+	+title('medium')
+.contacts__item
+	margin-bottom: 20px
+	position: relative
+.contacts__icon
+	fill: $green
+	width: 25px
+	height: 25px
+	margin-right: 10px
+	left: 0
+	+centered('y')
+.contacts__text
+	font-size: 16px
+	padding-left: 40px
+
