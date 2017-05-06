@@ -1,28 +1,28 @@
 {
   "works": [
     {
-      "img": "./assets/images/work-1.png",
-      "title": "Сайт 1",
-      "technologies": "HTML, CSS, Javascript",
-      "link": "#"
+      "img": "./assets/images/work-1.jpg",
+      "title": "Флорариумы",
+      "technologies": "HTML, CSS, jQuery, Bootstrap",
+      "link": "http://florarium39.ru/"
     },
     {
-      "img": "./assets/images/work-2.png",
-      "title": "Сайт 2",
-      "technologies": "Wordpress, PHP, CSS, jQuery",
-      "link": "#"
+      "img": "./assets/images/work-2.jpg",
+      "title": "Сайт компании Евротент",
+      "technologies": "HTML, CSS, jQuery, ModX",
+      "link": "http://evrotent39.ru/"
     },
     {
-      "img": "./assets/images/work-3.png",
-      "title": "Сайт 3",
-      "technologies": "ModX, HTML, CSS",
-      "link": "#"
+      "img": "./assets/images/work-3.jpg",
+      "title": "Тимбилдинг",
+      "technologies": "Pug, Sass, jQuery, JS, Gulp, Npm",
+      "link": "http://www.sysevent.ru/"
     },
     {
-      "img": "./assets/images/work-4.png",
-      "title": "Сайт 4",
-      "technologies": "HTML, CSS, Jguery",
-      "link": "#"
+      "img": "./assets/images/work-4.jpg",
+      "title": "Сайт отеля Fresh Wind",
+      "technologies": "HTML, CSS, Jguery, JS, Bootstrap, PHP",
+      "link": "http://veter-spa-hotel.ru/"
     }
   ]
 }

@@ -64,7 +64,7 @@ var slider = (function () {
             src = showItem.attr('src'),
             title = showItem.data('title'),
             tech = showItem.data('tech'),
-            link = showItem.data('link');
+            link = showItem.data('href');
 
         showEl.fadeOut(function () {
             fadedOut.resolve();
